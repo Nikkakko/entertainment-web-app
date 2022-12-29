@@ -8,7 +8,7 @@ const BASE_URL = import.meta.env.VITE_API_PUBLIC_URL;
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
   try {
-    const response = await axios.get(BASE_URL);
+    const response = await axios.get(import.meta.env.VITE_API_PUBLIC_URL);
     return response.data.record;
   } catch (error) {
     console.log(error);
