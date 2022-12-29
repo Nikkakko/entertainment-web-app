@@ -8,11 +8,9 @@ const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
   try {
-    const response = await axios.get(BASE_URL, {
-      headers: {
-        'X-Master-Key': `$2b$10$Tx9u22xC1fSGno2Wbhel6ObJK9v6doGaay4${API_KEY}`,
-      },
-    });
+    const response = await axios.get(
+      `https://api.jsonbin.io/v3/b/63adae9c15ab31599e277812`
+    );
     return response.data.record;
   } catch (error) {
     console.log(error);
