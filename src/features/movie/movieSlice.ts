@@ -6,7 +6,6 @@ const API_KEY = import.meta.env.VITE_X_MASTER_KEY;
 const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
-  console.log(API_KEY);
   try {
     const response = await axios.get(BASE_URL, {
       headers: {
