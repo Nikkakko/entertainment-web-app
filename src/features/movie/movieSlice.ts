@@ -5,11 +5,7 @@ import { ApiData } from '../../types/DataType';
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
   try {
-    const response = await axios.get(import.meta.env.VITE_API_URL, {
-      headers: {
-        'X-Master-Key': import.meta.env.VITE_X_MASTER_KEY_PRIVATE,
-      },
-    });
+    const response = await axios.get(import.meta.env.VITE_API_PUBLIC_URL);
     return response.data.record;
   } catch (error) {
     console.log(error);
