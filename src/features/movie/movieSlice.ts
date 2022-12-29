@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { ApiData } from '../../types/DataType';
+
 const API_KEY = import.meta.env.VITE_X_MASTER_KEY;
 const BASE_URL = import.meta.env.VITE_API_URL;
 
