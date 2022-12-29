@@ -4,13 +4,11 @@ import axios from 'axios';
 import { ApiData } from '../../types/DataType';
 
 const API_KEY = import.meta.env.VITE_X_MASTER_KEY;
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_PUBLIC_URL;
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
   try {
-    const response = await axios.get(
-      `https://api.jsonbin.io/v3/b/63adae9c15ab31599e277812`
-    );
+    const response = await axios.get(BASE_URL);
     return response.data.record;
   } catch (error) {
     console.log(error);
