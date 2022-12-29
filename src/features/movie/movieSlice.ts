@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { ApiData } from '../../types/DataType';
 
-const API_KEY = import.meta.env.VITE_X_MASTER_KEY;
+const API_KEY = import.meta.env.VITE_X_MASTER_KEY_PRIVATE;
 const BASE_URL = import.meta.env.VITE_API_PUBLIC_URL;
 
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
