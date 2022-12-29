@@ -3,12 +3,13 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { ApiData } from '../../types/DataType';
 
-const API_KEY = import.meta.env.VITE_X_MASTER_KEY_PRIVATE;
-const BASE_URL = import.meta.env.VITE_API_PUBLIC_URL;
-
 export const fetchMovies = createAsyncThunk('movie/fetchMovies', async () => {
   try {
-    const response = await axios.get(import.meta.env.VITE_API_PUBLIC_URL);
+    const response = await axios.get(import.meta.env.VITE_API_URL, {
+      headers: {
+        'X-Master-Key': import.meta.env.VITE_X_MASTER_KEY_PRIVATE,
+      },
+    });
     return response.data.record;
   } catch (error) {
     console.log(error);
