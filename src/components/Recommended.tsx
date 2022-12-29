@@ -62,7 +62,7 @@ const Title = styled.h1`
   line-height: 40px;
   margin-top: 40px;
 
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: ${({ theme }) => theme.Heading.Medium.fontSize};
     font-weight: ${({ theme }) => theme.Heading.Medium.fontWeight};
   }

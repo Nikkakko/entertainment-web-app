@@ -57,5 +57,11 @@ const Title = styled.h1`
   letter-spacing: -0.5px;
   line-height: 40px;
   margin-top: 34px;
+
+  @media (max-width: 425px) {
+    font-size: ${({ theme }) => theme.Heading.Medium.fontSize};
+    font-weight: ${({ theme }) => theme.Heading.Medium.fontWeight};
+    line-height: 30px;
+  }
 `;
 export default Movies;

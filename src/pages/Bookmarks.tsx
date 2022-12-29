@@ -150,6 +150,11 @@ const Title = styled.h1`
   font-size: ${({ theme }) => theme.Heading.Large.fontSize};
   font-weight: ${({ theme }) => theme.Heading.Large.fontWeight};
   color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: 425px) {
+    font-size: ${({ theme }) => theme.Heading.Medium.fontSize};
+    font-weight: ${({ theme }) => theme.Heading.Medium.fontWeight};
+  }
 `;
 
 export default Bookmarks;

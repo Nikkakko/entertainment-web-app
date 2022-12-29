@@ -208,6 +208,13 @@ const Bookmark = styled.div<DotProps>`
 
   right: 24px;
   top: 16px;
+
+  @media (max-width: 425px) {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 8px;
+  }
 `;
 const MovieCategory = styled.div`
   /* position: absolute; */

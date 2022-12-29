@@ -146,10 +146,9 @@ const Title = styled.h1`
   font-size: ${({ theme }) => theme.Heading.Small.fontSize};
   font-weight: ${({ theme }) => theme.Heading.Small.fontWeight};
 
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: ${({ theme }) => theme.Text.Small.fontSize};
     font-weight: ${({ theme }) => theme.Text.Medium.fontWeight};
-
     bottom: 12px;
   }
 `;
@@ -159,7 +158,7 @@ const Date = styled.p`
   left: 24px;
   bottom: 60px;
 
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: ${({ theme }) => theme.Text.Small.fontSize};
     font-weight: ${({ theme }) => theme.Text.Medium.fontWeight};
 
@@ -171,7 +170,7 @@ const Category = styled.p`
   position: absolute;
   left: 93px;
   bottom: 60px;
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: ${({ theme }) => theme.Text.Small.fontSize};
     font-weight: ${({ theme }) => theme.Text.Medium.fontWeight};
     bottom: 30px;
@@ -183,7 +182,7 @@ const Rating = styled.p`
   left: 153px;
   bottom: 60px;
 
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: ${({ theme }) => theme.Text.Small.fontSize};
     font-weight: ${({ theme }) => theme.Text.Medium.fontWeight};
     bottom: 30px;
@@ -206,6 +205,15 @@ const Bookmark = styled.div<DotProps>`
   top: 16px;
 
   z-index: 999;
+
+  @media (max-width: 425px) {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    top: 8px;
+
+    
+  }
 `;
 
 const MovieCategory = styled.div`
@@ -216,7 +224,7 @@ const MovieCategory = styled.div`
   bottom: 60px;
   left: 75px;
 
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     bottom: 30px;
   }
 `;
